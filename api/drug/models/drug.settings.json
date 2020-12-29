@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "drugs",
+  "info": {
+    "name": "drug"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "stockevents": {
+      "via": "drug",
+      "collection": "stockevent"
+    }
+  }
+}
